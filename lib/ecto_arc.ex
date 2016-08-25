@@ -13,12 +13,6 @@ defmodule EctoArc do
     {:ok} = store(model_or_models)
   end
 
-  def async_store(model_or_models) when is_map(model_or_models) or is_list(model_or_models) do
-    Task.Supervisor.async_nolink(Recruitee.TaskSupervisor, fn ->
-      store(model_or_models)
-    end)
-  end
-
   defp extract_arc_uploaders(models) when is_list(models) do
     models |> Enum.flat_map(fn(model) -> extract_arc_uploaders(model) end)
   end
