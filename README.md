@@ -1,4 +1,6 @@
 EctoArc
 ===========
 
-Work in progress. Documentation and tests will be done ASAP.
+This project has been deprecated. Please use Bow instead:
+
+https://github.com/recruitee/bow
